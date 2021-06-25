@@ -24,6 +24,10 @@ class CLLanguageManager: NSObject {
     private (set) var currentLanguage: Language = .system {
         didSet {
             if currentLanguage != oldValue {
+                if currentLanguage.rawValue.isEmpty {
+                    self.bundle = .main
+                    return
+                }
                 guard let bundlePath = Bundle.main.path(forResource: currentLanguage.rawValue, ofType: "lproj"),
                       let bundle = Bundle(path: bundlePath)
                 else {
