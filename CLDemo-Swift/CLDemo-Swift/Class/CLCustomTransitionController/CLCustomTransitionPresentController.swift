@@ -33,8 +33,8 @@ class CLCustomTransitionPresentController: CLController {
         view.layer.cornerRadius = 30
         return view
     }()
-    lazy var bubbleDelegate: CLCustomTransitionDelegate = {
-        let delegate = CLCustomTransitionDelegate {[weak self] in
+    lazy var bubbleDelegate: CLBubbleTransitionDelegate = {
+        let delegate = CLBubbleTransitionDelegate {[weak self] in
             guard let self = self else { return (.zero , .white) }
             return (self.startCenter, .hex("#FF6666"))
         } endCallback: {[weak self] in

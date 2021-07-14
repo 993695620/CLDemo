@@ -82,7 +82,7 @@
 		5BAAC0072681B6BB00C2F609 /* CLChangeLanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAAC0062681B6BB00C2F609 /* CLChangeLanguageController.swift */; };
 		5BC13529269E95D600D1CCB5 /* CLCustomTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC13528269E95D600D1CCB5 /* CLCustomTransitionController.swift */; };
 		5BC1352B269EB71900D1CCB5 /* CLCustomTransitionPresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1352A269EB71900D1CCB5 /* CLCustomTransitionPresentController.swift */; };
-		5BC1352D269EB75100D1CCB5 /* CLCustomTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1352C269EB75100D1CCB5 /* CLCustomTransitionDelegate.swift */; };
+		5BC1352D269EB75100D1CCB5 /* CLBubbleTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1352C269EB75100D1CCB5 /* CLBubbleTransitionDelegate.swift */; };
 		5BC1352F269EBA1C00D1CCB5 /* CLBubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1352E269EBA1C00D1CCB5 /* CLBubbleTransition.swift */; };
 		5BC13531269EBA9B00D1CCB5 /* CLBubbleInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC13530269EBA9B00D1CCB5 /* CLBubbleInteractiveTransition.swift */; };
 		5BD0434326832D3F0054F2B4 /* CLBreakPointResumeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0433E26832D3F0054F2B4 /* CLBreakPointResumeOperation.swift */; };
@@ -324,7 +324,7 @@
 		5BAAC0062681B6BB00C2F609 /* CLChangeLanguageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLChangeLanguageController.swift; sourceTree = "<group>"; };
 		5BC13528269E95D600D1CCB5 /* CLCustomTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCustomTransitionController.swift; sourceTree = "<group>"; };
 		5BC1352A269EB71900D1CCB5 /* CLCustomTransitionPresentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCustomTransitionPresentController.swift; sourceTree = "<group>"; };
-		5BC1352C269EB75100D1CCB5 /* CLCustomTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCustomTransitionDelegate.swift; sourceTree = "<group>"; };
+		5BC1352C269EB75100D1CCB5 /* CLBubbleTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLBubbleTransitionDelegate.swift; sourceTree = "<group>"; };
 		5BC1352E269EBA1C00D1CCB5 /* CLBubbleTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLBubbleTransition.swift; sourceTree = "<group>"; };
 		5BC13530269EBA9B00D1CCB5 /* CLBubbleInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLBubbleInteractiveTransition.swift; sourceTree = "<group>"; };
 		5BD0433E26832D3F0054F2B4 /* CLBreakPointResumeOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLBreakPointResumeOperation.swift; sourceTree = "<group>"; };
@@ -1026,7 +1026,7 @@
 			children = (
 				5BC13528269E95D600D1CCB5 /* CLCustomTransitionController.swift */,
 				5BC1352A269EB71900D1CCB5 /* CLCustomTransitionPresentController.swift */,
-				5BC1352C269EB75100D1CCB5 /* CLCustomTransitionDelegate.swift */,
+				5BC1352C269EB75100D1CCB5 /* CLBubbleTransitionDelegate.swift */,
 				5BC1352E269EBA1C00D1CCB5 /* CLBubbleTransition.swift */,
 				5BC13530269EBA9B00D1CCB5 /* CLBubbleInteractiveTransition.swift */,
 			);
@@ -1874,7 +1874,7 @@
 				5B58C57426846B34001736D7 /* CLRecorder.m in Sources */,
 				5B76932126841C70008BB92B /* CKDChatEmojiCellProtocol.swift in Sources */,
 				5B1C366F26841FAF00D777EB /* CLPermissionInterface.swift in Sources */,
-				5BC1352D269EB75100D1CCB5 /* CLCustomTransitionDelegate.swift in Sources */,
+				5BC1352D269EB75100D1CCB5 /* CLBubbleTransitionDelegate.swift in Sources */,
 				5BD4EB642681872D00B5284F /* CLPopupFoodPickerContentView.swift in Sources */,
 				5B7692C126841566008BB92B /* CLVernierCaliperMiddleCell.swift in Sources */,
 				5B76933226841C70008BB92B /* CLChatVoiceItem.swift in Sources */,
