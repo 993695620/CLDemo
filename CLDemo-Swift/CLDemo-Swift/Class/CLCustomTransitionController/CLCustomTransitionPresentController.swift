@@ -69,7 +69,7 @@ extension CLCustomTransitionPresentController {
 //MARK: - JmoVxia---布局
 private extension CLCustomTransitionPresentController {
     func initUI() {
-        transitioningDelegate = bubbleDelegate
+//        transitioningDelegate = bubbleDelegate
         view.backgroundColor = .hex("#FF6666")
         view.addSubview(bottomButton)
     }

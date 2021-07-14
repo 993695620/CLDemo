@@ -32,10 +32,6 @@ class CLCustomTransitionController: CLController {
         view.layer.cornerRadius = 30
         return view
     }()
-    lazy var bubbleDelegate: CLCustomTransitionDelegate = {
-        let delegate = CLCustomTransitionDelegate(bubbleCenter: bottomButton.center, bubbleColor: .hex("#FF6666"))
-        return delegate
-    }()
 }
 //MARK: - JmoVxia---生命周期
 extension CLCustomTransitionController {

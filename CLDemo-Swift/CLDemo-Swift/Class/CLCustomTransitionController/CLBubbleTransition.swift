@@ -82,7 +82,8 @@ extension CLBubbleTransition: UIViewControllerAnimatedTransitioning {
             let returningControllerView = transitionContext.view(forKey: .from)!
             let originalCenter = returningControllerView.center
             let originalSize = returningControllerView.frame.size
-            
+            containerView.addSubview(returningControllerView)
+
             let bubble = UIView()
             bubble.frame = frameForBubble(originalCenter, size: originalSize, start: bubbleCenter)
             bubble.layer.cornerRadius = bubble.frame.size.height / 2
