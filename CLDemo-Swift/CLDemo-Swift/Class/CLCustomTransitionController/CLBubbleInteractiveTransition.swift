@@ -15,27 +15,24 @@ extension CLBubbleInteractiveTransition {
 }
 
 class CLBubbleInteractiveTransition: UIPercentDrivenInteractiveTransition {
-    fileprivate var interactionStarted = false
-    fileprivate var interactionShouldFinish = false
-    fileprivate weak var controller: UIViewController?
+    private var interactionStarted = false
+    private var interactionShouldFinish = false
+    private weak var controller: UIViewController?
     
-    /// The threshold that grants the dismissal of the controller. Values from 0 to 1
-    open var interactionThreshold: CGFloat = 0.3
+    var interactionThreshold: CGFloat = 0.3
     
-    /// The swipe direction
-    open var swipeDirection: BubbleInteractiveTransitionSwipeDirection = .down
+    var swipeDirection: BubbleInteractiveTransitionSwipeDirection = .down
     
-    /// Attach the swipe gesture to a controller
-    ///
-    /// - Parameter to: the target controller
-    open func attach(to: UIViewController) {
+    func attach(to: UIViewController) {
         controller = to
         controller?.view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePan(gesture:))))
         if #available(iOS 10.0, *) {
             wantsInteractiveStart = false
         }
     }
-    
+}
+
+extension CLBubbleInteractiveTransition {
     @objc func handlePan(gesture: UIPanGestureRecognizer) {
         guard let controller = controller, let view = controller.view else { return }
         
@@ -63,4 +60,3 @@ class CLBubbleInteractiveTransition: UIPercentDrivenInteractiveTransition {
         }
     }
 }
-

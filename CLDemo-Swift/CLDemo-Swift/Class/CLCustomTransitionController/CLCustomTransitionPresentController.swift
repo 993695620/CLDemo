@@ -24,7 +24,7 @@ class CLCustomTransitionPresentController: CLController {
     private lazy var bottomButton: UIButton = {
         let view = UIButton()
         view.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
-        view.backgroundColor = .orange
+        view.backgroundColor = .orange.withAlphaComponent(0.5)
         view.setImage(UIImage(named: "add"), for: .normal)
         view.setImage(UIImage(named: "add"), for: .selected)
         view.setImage(UIImage(named: "add"), for: .highlighted)

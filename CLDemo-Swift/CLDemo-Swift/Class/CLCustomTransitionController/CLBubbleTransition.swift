@@ -71,7 +71,6 @@ extension CLBubbleTransition: UIViewControllerAnimatedTransitioning {
             }
             toViewController?.beginAppearanceTransition(true, animated: true)
                         
-            
             let originalCenter = fromControllerView.center
             let originalSize = fromControllerView.frame.size
 
@@ -84,7 +83,6 @@ extension CLBubbleTransition: UIViewControllerAnimatedTransitioning {
             containerView.addSubview(bubble)
             
             containerView.addSubview(fromControllerView)
-
 
             UIView.animate(withDuration: duration, animations: {
                 bubble.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
