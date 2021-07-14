@@ -10,25 +10,23 @@ import UIKit
 class CLCustomTransitionDelegate: NSObject {
     let transition = CLBubbleTransition()
     let interactiveTransition = CLBubbleInteractiveTransition()
-    private var bubbleCenter: CGPoint!
-    private var bubbleColor: UIColor!
-    init(bubbleCenter: CGPoint, bubbleColor: UIColor) {
-        self.bubbleCenter = bubbleCenter
-        self.bubbleColor = bubbleColor
+    private var startCallback: (() -> (center: CGPoint, color: UIColor))!
+    private var endCallback: (() -> (center: CGPoint, color: UIColor))!
+    init(startCallback: @escaping (() -> (center: CGPoint, color: UIColor)), endCallback: @escaping (() -> (center: CGPoint, color: UIColor))) {
+        self.startCallback = startCallback
+        self.endCallback = endCallback
     }
 }
 extension CLCustomTransitionDelegate: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .present
-        transition.bubbleCenter = bubbleCenter
-        transition.bubbleColor = bubbleColor
+        transition.itemCallback = startCallback
         return transition
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .dismiss
-        transition.bubbleCenter = bubbleCenter
-        transition.bubbleColor = bubbleColor
+        transition.itemCallback = endCallback
         return transition
     }
     

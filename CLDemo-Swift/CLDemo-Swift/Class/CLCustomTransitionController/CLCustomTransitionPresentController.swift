@@ -19,6 +19,7 @@ class CLCustomTransitionPresentController: CLController {
         fatalError("init(coder:) has not been implemented")
     }
     deinit {
+        CLLog("==================")
     }
     private lazy var bottomButton: UIButton = {
         let view = UIButton()
@@ -37,7 +38,11 @@ class CLCustomTransitionPresentController: CLController {
         return view
     }()
     lazy var bubbleDelegate: CLCustomTransitionDelegate = {
-        let delegate = CLCustomTransitionDelegate(bubbleCenter: bottomButton.center, bubbleColor: .hex("#FF6666"))
+        let delegate = CLCustomTransitionDelegate {
+            return (.zero, .hex("#FF6666"))
+        } endCallback: {
+            return (.zero, .hex("#FF6666"))
+        }
         delegate.interactiveTransition.attach(to: self)
         return delegate
     }()
@@ -69,7 +74,7 @@ extension CLCustomTransitionPresentController {
 //MARK: - JmoVxia---布局
 private extension CLCustomTransitionPresentController {
     func initUI() {
-//        transitioningDelegate = bubbleDelegate
+        transitioningDelegate = bubbleDelegate
         view.backgroundColor = .hex("#FF6666")
         view.addSubview(bottomButton)
     }
@@ -92,8 +97,9 @@ extension CLCustomTransitionPresentController {
 //MARK: - JmoVxia---objc
 @objc private extension CLCustomTransitionPresentController {
     func buttonAction() {
-        dismiss(animated: true)
-        bubbleDelegate.interactiveTransition.finish()
+        dismiss(animated: true) {
+            self.bubbleDelegate.interactiveTransition.finish()
+        }
     }
 }
 //MARK: - JmoVxia---私有方法
