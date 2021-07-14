@@ -19,28 +19,24 @@ class CLCustomTransitionPresentController: CLController {
         fatalError("init(coder:) has not been implemented")
     }
     deinit {
-        CLLog("==================")
     }
+    var startCenter: CGPoint = .zero
     private lazy var bottomButton: UIButton = {
         let view = UIButton()
-        view.backgroundColor = .white
-        view.titleLabel?.font = .systemFont(ofSize: 30)
-        view.setTitle("+", for: .normal)
-        view.setTitle("+", for: .selected)
-        view.setTitle("+", for: .highlighted)
-        view.setTitleColor(.hex("#FF6666"), for: .normal)
-        view.setTitleColor(.hex("#FF6666"), for: .selected)
-        view.setTitleColor(.hex("#FF6666"), for: .highlighted)
+        view.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
+        view.backgroundColor = .orange
+        view.setImage(UIImage(named: "add"), for: .normal)
+        view.setImage(UIImage(named: "add"), for: .selected)
+        view.setImage(UIImage(named: "add"), for: .highlighted)
         view.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         view.clipsToBounds = true
         view.layer.cornerRadius = 30
-        view.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
         return view
     }()
     lazy var bubbleDelegate: CLCustomTransitionDelegate = {
         let delegate = CLCustomTransitionDelegate {[weak self] in
             guard let self = self else { return (.zero , .white) }
-            return (self.bottomButton.center, .hex("#FF6666"))
+            return (self.startCenter, .hex("#FF6666"))
         } endCallback: {[weak self] in
             guard let self = self else { return (.zero , .white) }
             return (self.bottomButton.center, .hex("#FF6666"))

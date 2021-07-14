@@ -20,13 +20,9 @@ class CLCustomTransitionController: CLController {
     private lazy var bottomButton: UIButton = {
         let view = UIButton()
         view.backgroundColor = .hex("#FF6666")
-        view.titleLabel?.font = .systemFont(ofSize: 30)
-        view.setTitle("+", for: .normal)
-        view.setTitle("+", for: .selected)
-        view.setTitle("+", for: .highlighted)
-        view.setTitleColor(.white, for: .normal)
-        view.setTitleColor(.white, for: .selected)
-        view.setTitleColor(.white, for: .highlighted)
+        view.setImage(UIImage(named: "add"), for: .normal)
+        view.setImage(UIImage(named: "add"), for: .selected)
+        view.setImage(UIImage(named: "add"), for: .highlighted)
         view.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         view.clipsToBounds = true
         view.layer.cornerRadius = 30
@@ -83,6 +79,7 @@ extension CLCustomTransitionController {
 @objc private extension CLCustomTransitionController {
     func buttonAction() {
         let controller = CLCustomTransitionPresentController()
+        controller.startCenter = self.bottomButton.center
         present(controller, animated: true)
     }
 }

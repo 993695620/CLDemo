@@ -17,7 +17,7 @@ class CLController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     deinit {
-//        CLLog("\(self.classForCoder) deinit")
+        CLLog("\(self.classForCoder) deinit")
     }
     ///自定义返回响应
     var customBackActionCallback: (() -> (Bool))? {
