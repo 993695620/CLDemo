@@ -13,6 +13,7 @@
 		5B47C8282680989C00A36D22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B47C8272680989C00A36D22 /* Assets.xcassets */; };
 		5B47C82B2680989C00A36D22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B47C8292680989C00A36D22 /* LaunchScreen.storyboard */; };
 		5B47C82E2680989C00A36D22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B47C82D2680989C00A36D22 /* main.m */; };
+		5B645529269D8F1F0098D15D /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B645527269D8F1F0098D15D /* libmp3lame.a */; };
 		5BD0427C268323E50054F2B4 /* CLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD04273268323E50054F2B4 /* CLNavigationController.m */; };
 		5BD0427D268323E50054F2B4 /* CLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD04274268323E50054F2B4 /* CLController.m */; };
 		5BD0427E268323E50054F2B4 /* CLTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD04277268323E50054F2B4 /* CLTabbarController.m */; };
@@ -142,7 +143,6 @@
 		5BE6693026848D570095F82E /* CLBubbleView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BE6692D26848D570095F82E /* CLBubbleView.bundle */; };
 		5BE6693126848D570095F82E /* CLBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6692E26848D570095F82E /* CLBubbleView.m */; };
 		5BE6693526848D880095F82E /* CLCustomQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6693426848D870095F82E /* CLCustomQRCodeController.m */; };
-		5BF947E72685D31800DA8A19 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF947E12685D31700DA8A19 /* libmp3lame.a */; };
 		5BF947E82685D31800DA8A19 /* CLMp3Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF947E52685D31700DA8A19 /* CLMp3Encoder.m */; };
 		5BF947E92685D31800DA8A19 /* CLRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF947E62685D31700DA8A19 /* CLRecorder.m */; };
 /* End PBXBuildFile section */
@@ -158,6 +158,8 @@
 		5B47C82A2680989C00A36D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B47C82C2680989C00A36D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B47C82D2680989C00A36D22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B645527269D8F1F0098D15D /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		5B645528269D8F1F0098D15D /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
 		5BD04272268323E50054F2B4 /* CLTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTabbarController.h; sourceTree = "<group>"; };
 		5BD04273268323E50054F2B4 /* CLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLNavigationController.m; sourceTree = "<group>"; };
 		5BD04274268323E50054F2B4 /* CLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLController.m; sourceTree = "<group>"; };
@@ -399,8 +401,6 @@
 		5BE6692E26848D570095F82E /* CLBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLBubbleView.m; sourceTree = "<group>"; };
 		5BE6693326848D870095F82E /* CLCustomQRCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCustomQRCodeController.h; sourceTree = "<group>"; };
 		5BE6693426848D870095F82E /* CLCustomQRCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCustomQRCodeController.m; sourceTree = "<group>"; };
-		5BF947E12685D31700DA8A19 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
-		5BF947E22685D31700DA8A19 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
 		5BF947E32685D31700DA8A19 /* CLMp3Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMp3Encoder.h; sourceTree = "<group>"; };
 		5BF947E42685D31700DA8A19 /* CLRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLRecorder.h; sourceTree = "<group>"; };
 		5BF947E52685D31700DA8A19 /* CLMp3Encoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMp3Encoder.m; sourceTree = "<group>"; };
@@ -415,7 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F42B9FFEC82DF938CEB9036 /* libPods-CLDemo-OC.a in Frameworks */,
-				5BF947E72685D31800DA8A19 /* libmp3lame.a in Frameworks */,
+				5B645529269D8F1F0098D15D /* libmp3lame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +470,15 @@
 				5B47C82D2680989C00A36D22 /* main.m */,
 			);
 			path = "CLDemo-OC";
+			sourceTree = "<group>";
+		};
+		5B645526269D8F1F0098D15D /* LAME */ = {
+			isa = PBXGroup;
+			children = (
+				5B645527269D8F1F0098D15D /* libmp3lame.a */,
+				5B645528269D8F1F0098D15D /* lame.h */,
+			);
+			path = LAME;
 			sourceTree = "<group>";
 		};
 		5BD04271268323E50054F2B4 /* Base */ = {
@@ -1267,22 +1276,13 @@
 		5BF947DF2685D31700DA8A19 /* CLRecorder */ = {
 			isa = PBXGroup;
 			children = (
-				5BF947E02685D31700DA8A19 /* LAME */,
+				5B645526269D8F1F0098D15D /* LAME */,
 				5BF947E42685D31700DA8A19 /* CLRecorder.h */,
 				5BF947E62685D31700DA8A19 /* CLRecorder.m */,
 				5BF947E32685D31700DA8A19 /* CLMp3Encoder.h */,
 				5BF947E52685D31700DA8A19 /* CLMp3Encoder.m */,
 			);
 			path = CLRecorder;
-			sourceTree = "<group>";
-		};
-		5BF947E02685D31700DA8A19 /* LAME */ = {
-			isa = PBXGroup;
-			children = (
-				5BF947E12685D31700DA8A19 /* libmp3lame.a */,
-				5BF947E22685D31700DA8A19 /* lame.h */,
-			);
-			path = LAME;
 			sourceTree = "<group>";
 		};
 		9B783857FA84B99B8DD4E81C /* Frameworks */ = {
@@ -1708,7 +1708,6 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/CLDemo-OC/CLRecordeEncodeController/CLRecorder/LAME",
 					"$(PROJECT_DIR)/CLDemo-OC/Class/CLRecordeEncodeController/CLRecorder/LAME",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "JmoVxia.CKD.CLDemo-OC";
@@ -1733,7 +1732,6 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/CLDemo-OC/CLRecordeEncodeController/CLRecorder/LAME",
 					"$(PROJECT_DIR)/CLDemo-OC/Class/CLRecordeEncodeController/CLRecorder/LAME",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "JmoVxia.CKD.CLDemo-OC";

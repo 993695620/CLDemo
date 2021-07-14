@@ -132,6 +132,15 @@ private extension CLHomePageController {
             tableViewHepler.dataSource.append(item)
         }
         do{
+            let item = CLTitleCellItem(title: "自定义转场动画".localized, type: CLCustomTransitionController.self)
+            item.accessoryType = .disclosureIndicator
+            item.didSelectCellCallback = {[weak self, weak item] (value) in
+                guard let self = self, let item = item else { return }
+                self.push(item.type, title: item.title)
+            }
+            tableViewHepler.dataSource.append(item)
+        }
+        do{
             let item = CLTitleCellItem(title: "动画按钮".localized, type: CLAnimationButtonController.self)
             item.accessoryType = .disclosureIndicator
             item.didSelectCellCallback = {[weak self, weak item] (value) in

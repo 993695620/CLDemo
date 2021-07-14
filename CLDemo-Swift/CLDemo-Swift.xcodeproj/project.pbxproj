@@ -80,6 +80,11 @@
 		5BAABFFC2681B3B200C2F609 /* CLTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAABFFB2681B3B200C2F609 /* CLTitleCell.swift */; };
 		5BAAC0012681B65200C2F609 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BAAC0032681B65200C2F609 /* Localizable.strings */; };
 		5BAAC0072681B6BB00C2F609 /* CLChangeLanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAAC0062681B6BB00C2F609 /* CLChangeLanguageController.swift */; };
+		5BC13529269E95D600D1CCB5 /* CLCustomTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC13528269E95D600D1CCB5 /* CLCustomTransitionController.swift */; };
+		5BC1352B269EB71900D1CCB5 /* CLCustomTransitionPresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1352A269EB71900D1CCB5 /* CLCustomTransitionPresentController.swift */; };
+		5BC1352D269EB75100D1CCB5 /* CLCustomTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1352C269EB75100D1CCB5 /* CLCustomTransitionDelegate.swift */; };
+		5BC1352F269EBA1C00D1CCB5 /* CLBubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1352E269EBA1C00D1CCB5 /* CLBubbleTransition.swift */; };
+		5BC13531269EBA9B00D1CCB5 /* CLBubbleInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC13530269EBA9B00D1CCB5 /* CLBubbleInteractiveTransition.swift */; };
 		5BD0434326832D3F0054F2B4 /* CLBreakPointResumeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0433E26832D3F0054F2B4 /* CLBreakPointResumeOperation.swift */; };
 		5BD0434426832D3F0054F2B4 /* CLBreakPointResumeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0433F26832D3F0054F2B4 /* CLBreakPointResumeManager.swift */; };
 		5BD0434526832D3F0054F2B4 /* CLBreakPointResumeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0434026832D3F0054F2B4 /* CLBreakPointResumeItem.swift */; };
@@ -317,6 +322,11 @@
 		5BAAC0022681B65200C2F609 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5BAAC0042681B65900C2F609 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5BAAC0062681B6BB00C2F609 /* CLChangeLanguageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLChangeLanguageController.swift; sourceTree = "<group>"; };
+		5BC13528269E95D600D1CCB5 /* CLCustomTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCustomTransitionController.swift; sourceTree = "<group>"; };
+		5BC1352A269EB71900D1CCB5 /* CLCustomTransitionPresentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCustomTransitionPresentController.swift; sourceTree = "<group>"; };
+		5BC1352C269EB75100D1CCB5 /* CLCustomTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCustomTransitionDelegate.swift; sourceTree = "<group>"; };
+		5BC1352E269EBA1C00D1CCB5 /* CLBubbleTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLBubbleTransition.swift; sourceTree = "<group>"; };
+		5BC13530269EBA9B00D1CCB5 /* CLBubbleInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLBubbleInteractiveTransition.swift; sourceTree = "<group>"; };
 		5BD0433E26832D3F0054F2B4 /* CLBreakPointResumeOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLBreakPointResumeOperation.swift; sourceTree = "<group>"; };
 		5BD0433F26832D3F0054F2B4 /* CLBreakPointResumeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLBreakPointResumeManager.swift; sourceTree = "<group>"; };
 		5BD0434026832D3F0054F2B4 /* CLBreakPointResumeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLBreakPointResumeItem.swift; sourceTree = "<group>"; };
@@ -878,6 +888,7 @@
 				5BD4EAF7268183E700B5284F /* Base */,
 				5B800435268194B1000E39AC /* CLHomePageController */,
 				5B8004422681AD7E000E39AC /* CLChatContactController */,
+				5BC13527269E95B800D1CCB5 /* CLCustomTransitionController */,
 				5B8004452681ADE9000E39AC /* CLRecordController */,
 				5B8004482681ADFA000E39AC /* CLMealController */,
 				5B80044B2681AE22000E39AC /* CLMeController */,
@@ -1008,6 +1019,18 @@
 				5BAAC0062681B6BB00C2F609 /* CLChangeLanguageController.swift */,
 			);
 			path = CLChangeLanguageController;
+			sourceTree = "<group>";
+		};
+		5BC13527269E95B800D1CCB5 /* CLCustomTransitionController */ = {
+			isa = PBXGroup;
+			children = (
+				5BC13528269E95D600D1CCB5 /* CLCustomTransitionController.swift */,
+				5BC1352A269EB71900D1CCB5 /* CLCustomTransitionPresentController.swift */,
+				5BC1352C269EB75100D1CCB5 /* CLCustomTransitionDelegate.swift */,
+				5BC1352E269EBA1C00D1CCB5 /* CLBubbleTransition.swift */,
+				5BC13530269EBA9B00D1CCB5 /* CLBubbleInteractiveTransition.swift */,
+			);
+			path = CLCustomTransitionController;
 			sourceTree = "<group>";
 		};
 		5BD0433D26832D3F0054F2B4 /* CLBreakPointResumeController */ = {
@@ -1728,6 +1751,8 @@
 				5BE6681A268475940095F82E /* CLCarouselCell.swift in Sources */,
 				5B08E44D2681E6A7001C271A /* CLLanguageManager.swift in Sources */,
 				5B76931F26841C70008BB92B /* CLChatPhotoView.swift in Sources */,
+				5BC1352F269EBA1C00D1CCB5 /* CLBubbleTransition.swift in Sources */,
+				5BC13531269EBA9B00D1CCB5 /* CLBubbleInteractiveTransition.swift in Sources */,
 				5BD0442E26833CD60054F2B4 /* CLTagsFrameHelper.swift in Sources */,
 				5BD0437126832EAB0054F2B4 /* CLVideoPlayer.swift in Sources */,
 				5BD4EB27268184AB00B5284F /* UIBezierPath+Extension.swift in Sources */,
@@ -1764,6 +1789,7 @@
 				5BD4EB762681872D00B5284F /* CLPopupLoadingController.swift in Sources */,
 				5B76931D26841C70008BB92B /* CLChatPhotoAlbumImageCache.swift in Sources */,
 				5BD0441626833B2E0054F2B4 /* CLDrawMarqueeController.swift in Sources */,
+				5BC13529269E95D600D1CCB5 /* CLCustomTransitionController.swift in Sources */,
 				5BD4EB682681872D00B5284F /* CLMomentumView.swift in Sources */,
 				5BD4EB6E2681872D00B5284F /* CLHourMinuteDataPickerView.swift in Sources */,
 				5BE668E7268488B90095F82E /* CLRoundAnimationView.swift in Sources */,
@@ -1848,10 +1874,12 @@
 				5B58C57426846B34001736D7 /* CLRecorder.m in Sources */,
 				5B76932126841C70008BB92B /* CKDChatEmojiCellProtocol.swift in Sources */,
 				5B1C366F26841FAF00D777EB /* CLPermissionInterface.swift in Sources */,
+				5BC1352D269EB75100D1CCB5 /* CLCustomTransitionDelegate.swift in Sources */,
 				5BD4EB642681872D00B5284F /* CLPopupFoodPickerContentView.swift in Sources */,
 				5B7692C126841566008BB92B /* CLVernierCaliperMiddleCell.swift in Sources */,
 				5B76933226841C70008BB92B /* CLChatVoiceItem.swift in Sources */,
 				5BD043AB268330F00054F2B4 /* CLAnimationButton.swift in Sources */,
+				5BC1352B269EB71900D1CCB5 /* CLCustomTransitionPresentController.swift in Sources */,
 				5B800440268194FD000E39AC /* CLCellProtocol.swift in Sources */,
 				5BD043B6268332BF0054F2B4 /* CLHistogramView.swift in Sources */,
 				5B80043126819307000E39AC /* CLCustomTabbar.swift in Sources */,
