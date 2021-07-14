@@ -38,10 +38,12 @@ class CLCustomTransitionPresentController: CLController {
         return view
     }()
     lazy var bubbleDelegate: CLCustomTransitionDelegate = {
-        let delegate = CLCustomTransitionDelegate {
-            return (.zero, .hex("#FF6666"))
-        } endCallback: {
-            return (.zero, .hex("#FF6666"))
+        let delegate = CLCustomTransitionDelegate {[weak self] in
+            guard let self = self else { return (.zero , .white) }
+            return (self.bottomButton.center, .hex("#FF6666"))
+        } endCallback: {[weak self] in
+            guard let self = self else { return (.zero , .white) }
+            return (self.bottomButton.center, .hex("#FF6666"))
         }
         delegate.interactiveTransition.attach(to: self)
         return delegate
@@ -97,9 +99,8 @@ extension CLCustomTransitionPresentController {
 //MARK: - JmoVxia---objc
 @objc private extension CLCustomTransitionPresentController {
     func buttonAction() {
-        dismiss(animated: true) {
-            self.bubbleDelegate.interactiveTransition.finish()
-        }
+        dismiss(animated: true)
+        bubbleDelegate.interactiveTransition.finish()
     }
 }
 //MARK: - JmoVxia---私有方法

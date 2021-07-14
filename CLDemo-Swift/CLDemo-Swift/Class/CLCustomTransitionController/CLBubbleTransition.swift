@@ -70,10 +70,10 @@ extension CLBubbleTransition: UIViewControllerAnimatedTransitioning {
                 fromViewController?.beginAppearanceTransition(false, animated: true)
             }
             toViewController?.beginAppearanceTransition(true, animated: true)
+                        
             
             let originalCenter = fromControllerView.center
             let originalSize = fromControllerView.frame.size
-            containerView.addSubview(fromControllerView)
 
             let bubble = UIView()
             bubble.frame = frameForBubble(originalCenter, size: originalSize, start: item.center)
@@ -82,6 +82,9 @@ extension CLBubbleTransition: UIViewControllerAnimatedTransitioning {
             bubble.center = item.center
             bubble.transform = .identity
             containerView.addSubview(bubble)
+            
+            containerView.addSubview(fromControllerView)
+
 
             UIView.animate(withDuration: duration, animations: {
                 bubble.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
@@ -90,11 +93,11 @@ extension CLBubbleTransition: UIViewControllerAnimatedTransitioning {
                 fromControllerView.alpha = 0
             }, completion: { (completed) in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-                
+                bubble.removeFromSuperview()
+
                 if !transitionContext.transitionWasCancelled {
                     fromControllerView.center = originalCenter
                     fromControllerView.removeFromSuperview()
-                    bubble.removeFromSuperview()
                     
                     if fromViewController?.modalPresentationStyle == .custom {
                         fromViewController?.endAppearanceTransition()
